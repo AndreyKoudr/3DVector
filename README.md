@@ -6,7 +6,7 @@
 possible use of simple operations on vectors like v3 = v1 + v2 etc.
   This is a VC 2019 console test project with no Windows specifics, easily converted into Linux.
 
-  The first class is a traditional C without SIMD acceleration; the second is
+  The first class is a traditional C++ 11/14 without SIMD acceleration; the second is
 based on basic SSE2 Intel intrinsics 
 (see https://software.intel.com/sites/landingpage/IntrinsicsGuide/). The intrinsics
 together with the optimiser may produce very good acceleration of the code
