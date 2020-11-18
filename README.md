@@ -4,7 +4,7 @@
 
   These are two basic classes for 3D vectors with operators which make
 possible use of simple operations on vectors like v3 = v1 + v2 etc.
-  This is a VC 2019 console test projects with no Windows specifics, easily converted into Linux.
+  This is a VC 2019 console test project with no Windows specifics, easily converted into Linux.
 
   The first class is a traditional C without SIMD acceleration; the second is
 based on basic SSE2 Intel intrinsics 
@@ -14,7 +14,9 @@ together with the optimiser may produce very good acceleration of the code
 but it is a little bit tricky.
 
   To make a fast code, you must follow the two principles
+  
   (1) <B>more calculations</B> (in registers)
+  
   (2) <B>less memory access</B> because it is much slower
 
 It means that such constructions without temporary variables like these
@@ -52,21 +54,37 @@ on all 4 components at once.
   "float" below is 4 or 8 byte float
 
   float = V[AxisX]  - get vector coordinate
-  float = !V        - get vector length                         
-  v3 = v1 ^ v2      - cross product                     
+  
+  float = !V        - get vector length       
+  
+  v3 = v1 ^ v2      - cross product      
+  
   v2 = +v1          - normalisation
+  
   float = v1 * v2   - dot product, W is ignored
+  
   (v1 > v2)         - vectors co-directed?    
-  bool(v1==v2)      - vectors equal?                            
-  v2 = -v1          - change sign of components                 
+  
+  bool(v1==v2)      - vectors equal?          
+  
+  v2 = -v1          - change sign of components    
+  
   v3 = v1 + v2      - addition
+  
   v1 += v2;         - addition
+  
   v3 = v1 - v2      - subtraction
+  
   v1 -= v2;         - subtraction
+  
   v3 = v1 * float   - multiply by scalar
+  
   v3 = float * v    - multiply by scalar
+  
   v1 *= float       - multiply by scalar
+  
   v3 = v1 / float   - divide by scalar
+  
   v1 /= float       - divide by scalar
   
   4-component vector on 4-byte floats driven by SIMD
@@ -79,27 +97,43 @@ on all 4 components at once.
   "float" below is a 4-byte float
 
   float = V[AxisX]  - get vector coordinate
-  float = !V        - get vector length                         
-  v3 = v1 ^ v2      - cross product                     
+  
+  float = !V        - get vector length   
+  
+  v3 = v1 ^ v2      - cross product      
+  
   v2 = +v1          - normalisation
+  
   float = v1 * v2   - dot product, W is ignored
+  
   (v1 > v2)         - vectors co-directed?    
-  bool(v1==v2)      - vectors equal?                            
-  v2 = -v1          - change sign of components                 
+  
+  bool(v1==v2)      - vectors equal?          
+  
+  v2 = -v1          - change sign of components     
+  
   v3 = v1 + v2      - addition
+  
   v1 += v2;         - addition
+  
   v3 = v1 - v2      - subtraction
+  
   v1 -= v2;         - subtraction
+  
   v3 = v1 * float   - multiply by scalar
+  
   v3 = float * v    - multiply by scalar
+  
   v1 *= float       - multiply by scalar
+  
   v3 = v1 / float   - divide by scalar
+  
   v1 /= float       - divide by scalar
   
   Tests (in console VS 2019 project)
   ----------------------------------
   
-    Test 1 : Simple ariphmetic of 3D vectors
+  Test 1 : Simple ariphmetic of 3D vectors
     
 time without SIMD 0.004114, with SIMD 0.0031171 sec, speedup 1.31982
 
