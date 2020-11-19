@@ -38,8 +38,9 @@ are preferable.
 
   The sets of operations are identical for both classes.
 
-  The fourth homogeneous coordinate is set to zero everywhere but normally it should be 
-initialised to 1.0.
+  The fourth <B>homogeneous</B> coordinate is set to zero everywhere but normally it should be 
+initialised to 1.0. It is used in matrix coordinate transforms like V[4] = M[4x4] v[4]. For example,
+it is necessary to formulate a transform matrix for translation.
 
   4-component vector template, no SIMD
   ------------------------------------
