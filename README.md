@@ -31,7 +31,7 @@ or
 
     v3[i] = 6 * (v3[i] + v4[i]) / (!(v3[i] + v4[i])) + (+(v4[i] - v3[i])) * static_cast<float>(0.333); 
 
-are preferable.
+are preferable. Therefore, for just adding two vector arrays, acceleration is very modest if any (many register loads and saves, too little calculaton).
   
   The first template class <B>TVector<T></B> works with both float-s and double-s; the second
   SIMD-base class <B>Vector4</B> is written for 4-byte floats only.
