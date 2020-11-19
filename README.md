@@ -29,7 +29,7 @@ It means that such constructions <B>without temporary variables</B> like these
           
 or 
 
-v3[i] = 6 * (v3[i] + v4[i]) / (!(v3[i] + v4[i])) + (+(v4[i] - v3[i])) * static_cast<float>(0.333); 
+    v3[i] = 6 * (v3[i] + v4[i]) / (!(v3[i] + v4[i])) + (+(v4[i] - v3[i])) * static_cast<float>(0.333); 
 
 are preferable.
   
