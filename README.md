@@ -19,7 +19,7 @@ but it is a little bit tricky.
   
   (2) <B>less memory access</B> because it is much slower
 
-It means that such constructions without temporary variables like these
+It means that such constructions <B>without temporary variables</B> like these
 
     v3.data = _mm_sub_ps(
         _mm_mul_ps(_mm_shuffle_ps(data, data, _MM_SHUFFLE(3, 0, 2, 1)),
