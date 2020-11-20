@@ -9,7 +9,7 @@ possible use of simple operations on vectors like v3 = v1 + v2 etc.
   The first class is a traditional C++ 11/14 without SIMD acceleration; the second is
 based on basic SSE2 Intel intrinsics 
 (see https://software.intel.com/sites/landingpage/IntrinsicsGuide/). The intrinsics
-together with the optimiser may produce very good acceleration of the code
+together with the compiler optimiser may produce very good acceleration of the code
 (e.g. https://github.com/AndreyKoudr/ThreadedGaussElimination),
 but it is a little bit tricky.
 
@@ -17,7 +17,7 @@ but it is a little bit tricky.
   
   (1) <B>more calculations</B> (in registers)
   
-  (2) <B>less memory access</B> because it is much slower
+  (2) <B>less memory access</B> because it is much much slower
 
 It means that such constructions <B>without temporary variables</B> like these
 
@@ -39,8 +39,7 @@ are preferable. Therefore, for just adding two vector arrays, acceleration is ve
   The sets of operations are identical for both classes.
 
   The fourth <B>homogeneous</B> coordinate is set to zero everywhere but normally it should be 
-initialised to 1.0. It is used in matrix coordinate transforms like V[4] = M[4x4] v[4]. For example,
-it is necessary to formulate a transform matrix for translation.
+initialised to 1.0. It is necessary for matrix coordinate transforms like V[4] = M[4x4] v[4] in translation, for example.
 
   4-component vector template, no SIMD
   ------------------------------------
