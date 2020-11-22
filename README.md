@@ -50,9 +50,8 @@ on all 4 components at once.
  
   Operations
   ----------
-  - "float" below is 4 or 8 byte float
+  "float" below is 4 or 8 byte float
   
-  - "float" below is 4 or 8 byte float
   - float = V[AxisX]  - get vector coordinate  
   - float = !V        - get vector length         
   - v3 = v1 ^ v2      - cross product        
@@ -80,7 +79,6 @@ on all 4 components at once.
   ----------
   "float" below is a 4-byte float
 
-  - "float" below is 4 or 8 byte float
   - float = V[AxisX]  - get vector coordinate  
   - float = !V        - get vector length         
   - v3 = v1 ^ v2      - cross product        
