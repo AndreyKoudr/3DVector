@@ -16,7 +16,7 @@ but it is a little bit tricky.
   To make a fast code, you must follow the two principles
   
   - <B>more calculations</B> (in registers)
-  - <B>less memory access</B> because it is much much slower, even to stack which is in fastest memory cache
+  - <B>less memory access</B> because it is much much slower, even to stack which is in fastest memory cache due to frequent use
 
 It means that such constructions <B>without temporary variables</B> like these
 
