@@ -217,6 +217,11 @@ public:
     for (int i = 0; i < 4; i++) XYZW[i] += v2.XYZW[i];
     return *this;
   }
+                              // subtraction
+  TVector operator-=(TVector v2) {
+    for (int i = 0; i < 4; i++) XYZW[i] -= v2.XYZW[i];
+    return *this;
+  }
 
   TVector inline operator+(TVector v2) const {
     TVector v3;
